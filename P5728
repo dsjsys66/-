@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+	struct student
+	{
+		int c;
+		int m;
+		int e;
+	}a[2022];
+int main()
+{
+	int n,i,j,b;
+	scanf("%d",&n);
+	while(i<n)
+	{
+		scanf("%d%d%d",&a[i].c,&a[i].m,&a[i].e);
+		i++;
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(abs(a[i].c-a[j].c)<=5 &&
+			   abs(a[i].c-a[j].c)<=5 &&
+			   abs(a[i].c-a[j].c)<=5 &&
+			   abs(a[i].c+a[i].m+a[i].e-a[j].c-a[j].m-a[j].e)<=10)
+				b++;
+		}
+	}
+	printf("%d",b);
+}
